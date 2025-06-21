@@ -1,5 +1,5 @@
 <script setup>
-import { useAsset } from '@/composables/useAsset';
+import { useAsset } from '@/components/RAsset/composables/useAsset';
 
 const props = defineProps({
   name: { 
@@ -11,16 +11,6 @@ const props = defineProps({
     type: String, 
     default: '' 
   },
-
-  customClass: { 
-    type: String, 
-    default: '' 
-  },
-
-  loading: { 
-    type: String, 
-    default: 'lazy' 
-  },
 });
 
 const src = useAsset(props.name);
@@ -30,6 +20,5 @@ const src = useAsset(props.name);
   <img
     :src="src"
     :alt="alt"
-    :class="customClass"
   />
 </template>

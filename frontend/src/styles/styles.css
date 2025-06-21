@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #156155;      /* Verde-escuro */
-  --color-secondary: #9FC244;    /* Verde-claro vibrante */
-  --color-accent: #F5F9EA;       /* Verde-claro pastel */
-  --color-gray-dark: #939393;    /* Cinza médio */
-  --color-gray-medium: #F2F2F2;  /* Cinza claro */
-  --color-gray-light: #F8F8F8;   /* Cinza muito claro */
-  --color-white: #FFFFFF;        /* Branco puro */
-  --color-black: #000000;        /* Preto puro */
+  --color-primary: #156155;      
+  --color-secondary: #9FC244;    
+  --color-accent: #F5F9EA;      
+  --color-gray-dark: #939393;    
+  --color-gray-medium: #F2F2F2;  
+  --color-gray-light: #F8F8F8;   
+  --color-white: #FFFFFF;        
+  --color-black: #000000;        
 }
 
 * {
@@ -28,5 +28,57 @@ html, body {
 #app {
   height: 100%;
   width: 100%;
-  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+h1, h2 {
+  color: var(--color-primary);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 320px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .container-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-section {
+    padding: 3.5rem 4rem 5rem;
+  }
 }

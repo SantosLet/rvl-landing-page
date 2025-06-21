@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { computed } from 'vue'
 import icons from '@/components/RAsset/RCustomIcon/customIcon.js'
 
@@ -10,7 +10,7 @@ const props = defineProps({
 
   size: { 
     type: [String, Number], 
-    default: 24 
+    default: 24
   },
 
   fill: { 
@@ -20,7 +20,7 @@ const props = defineProps({
 
   stroke: { 
     type: String, 
-    default: 'currentColor' 
+    default: '' 
   }
 })
 
@@ -34,8 +34,7 @@ const iconData = computed(() => {
 
 <template>
   <svg
-    :width="size"
-    :height="size"
+    class="size-full"
     :fill="fill"
     :stroke="stroke"
     :viewBox="iconData.viewBox"
