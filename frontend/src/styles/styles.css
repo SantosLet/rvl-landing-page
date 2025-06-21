@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #156155;      /* Verde-escuro */
+  --color-secondary: #9FC244;    /* Verde-claro vibrante */
+  --color-accent: #F5F9EA;       /* Verde-claro pastel */
+  --color-gray-dark: #939393;    /* Cinza médio */
+  --color-gray-medium: #F2F2F2;  /* Cinza claro */
+  --color-gray-light: #F8F8F8;   /* Cinza muito claro */
+  --color-white: #FFFFFF;        /* Branco puro */
+  --color-black: #000000;        /* Preto puro */
+}
+
+* {
+  font-family: 'Satoshi';
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
