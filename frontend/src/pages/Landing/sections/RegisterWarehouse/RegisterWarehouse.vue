@@ -37,14 +37,14 @@ import InputText from 'primevue/inputtext';
             </div>
 
             <div class="col-span-1">
-              <InputBase label="Localização do armazém">
-                <InputText placeholder="Endereço"/>
+              <InputBase label="Tamanho do armazém">
+                <InputNumber placeholder="500 a 1000 m²" suffix="m²" />
               </InputBase>
             </div>
 
             <div class="col-span-2">
-              <InputBase label="Tamanho do armazém">
-                <InputNumber placeholder="500 a 1000 m²" suffix="m²" />
+              <InputBase label="Localização do armazém">
+                <InputText placeholder="Endereço"/>
               </InputBase>
             </div>
             
@@ -67,7 +67,7 @@ import InputText from 'primevue/inputtext';
 
       <div class="second-card-register-warehouse">
         <RCard color="#9FC244" class="tablet:h-96 w-full relative flex flex-col tablet:flex-row -top-24 z-40 p-0">
-          <div class="w-full tablet:w-1/2 flex flex-1 flex-col justify-center pl-16 pr-8 py-12">
+          <div class="w-full tablet:w-1/2 flex flex-1 flex-col justify-center px-8 tablet:pl-16 pr-8 py-12">
             <h2 class="w-[28rem] max-w-full text-start pb-0"> Cadastre-se agora e diminua sua vacância física </h2>
             <p class="w-[30rem] max-w-full text-white pt-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
           </div>
