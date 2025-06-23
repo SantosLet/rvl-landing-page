@@ -1,6 +1,4 @@
-<script setup lang="ts">
-// const emits = defineEmits([]);
-
+<script setup>
 const props = defineProps({
   color: {
     type: String,

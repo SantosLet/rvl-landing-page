@@ -9,6 +9,11 @@ const props = defineProps({
     type: String as () => 'primary' | 'secondary' | 'tertiary',
     default: 'primary',
   },
+
+  itsUppercase: {
+    type: Boolean,
+    default: true
+  }
 });
 </script>
 
@@ -23,7 +28,8 @@ const props = defineProps({
       },
     ]">
     <p 
-      class="text-xs font-semibold font-satoshi uppercase"
+      class="text-xxs note:text-xs font-semibold font-satoshi"
+      :class="{ 'uppercase' : itsUppercase }"
     >{{ props.title }}</p>
   </PButton>
 </template>

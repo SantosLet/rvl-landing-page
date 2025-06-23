@@ -35,13 +35,17 @@ const cardsInfo = [
 </template>
 
 <style scoped>
+.container-section {
+  @apply phone-sm:pb-28 note:pb-40;
+}
+
 .cards-container {
-  @apply flex flex-wrap gap-6 pt-12;
+  @apply flex flex-wrap gap-6;
 }
 
 .card {
   @apply 
-    phone-sm:min-w-72
+    phone-sm:min-w-64
     tablet-md:min-w-80
     phone-sm:!p-8 
     phone:!p-10
@@ -49,7 +53,7 @@ const cardsInfo = [
 }
 
 .comment {
-  @apply font-light text-gray-dark text-justify text-[1.05rem] pt-4 pb-2;
+  @apply font-light text-gray-dark text-[1.05rem] pt-4 pb-2;
 }
 
 @media (min-width: 320px) {

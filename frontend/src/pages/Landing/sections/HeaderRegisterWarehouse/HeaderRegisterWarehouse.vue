@@ -14,11 +14,13 @@ import RAsset from '@/components/RAsset/RAsset.vue';
         class="submessage-section"
       > Conecte-se com milhares de empresas que buscam espaço de armazenagem e aumente a rentabilidade do seu imóvel. </p>
       
-      <RButton 
-        class="self-start mt-6 px-7 py-3"
-        title="Cadastre seu armazém"
-        variant="secondary"
-      />
+      <a href="#registerWarehouse">
+        <RButton 
+          class="self-start mt-6 px-7 py-3"
+          title="Cadastre seu armazém"
+          variant="secondary"
+        />
+      </a>
     </div>
 
     <div class="header-register-warehouse-images">
@@ -42,7 +44,6 @@ import RAsset from '@/components/RAsset/RAsset.vue';
 
 .header-register-warehouse-images {
   @apply w-1/2 relative flex-1 overflow-hidden;
-  height: calc(100vh - 5rem);
 }
 
 .submessage-section {
@@ -66,5 +67,11 @@ import RAsset from '@/components/RAsset/RAsset.vue';
     max-h-[50%] 
     tablet-md:w-full
     tablet-md:max-h-full;
+}
+
+@media (min-width: 960px) {
+  .header-register-warehouse-images {
+    height: calc(100vh - 5rem);
+  }
 }
 </style>

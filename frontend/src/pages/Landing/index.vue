@@ -1,13 +1,14 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, markRaw } from 'vue'
 import { sections as importedSections } from '@/pages/Landing/sections/landingSections'
 import RButton from '@/components/Buttons/RButton.vue';
 import RNavbar from './components/RNavbar.vue';
 import RAsset from '@/components/RAsset/RAsset.vue';
 
-// const emits = defineEmits([]);
-
-const sections = ref(importedSections)
+const sections = ref(importedSections.map(section => ({
+  component: markRaw(section.component),
+  props: section.props
+})))
 </script>
 
 <template>

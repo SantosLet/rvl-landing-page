@@ -1,16 +1,24 @@
 <script setup>
+import { ref } from 'vue';
 import RAsset from '@/components/RAsset/RAsset.vue';
 import RButton from '@/components/Buttons/RButton.vue';
 import RSidebar from './RSidebar.vue';
+
+let sidebarNav = ref(false);
+
+function openSidebarNav(state) {
+  sidebarNav.value = state;
+}
 </script>
 
 <template>
   <nav class="rvl-navbar">
-    <RSidebar/>
+    <RSidebar :itsOpen="sidebarNav" @close="openSidebarNav"/>
 
     <RAsset 
-      name="burgermenu_icon_white.svg" 
-      class="size-9 note:hidden cursor-pointer"
+      name="burgermenu_left_icon_white.svg" 
+      class="size-9 note:hidden cursor-pointer select-none"
+      @click="openSidebarNav(true)"
     />
     
     <ul class="navbar-items">
@@ -39,7 +47,7 @@ import RSidebar from './RSidebar.vue';
 
 <style scoped>
 .rvl-navbar {
-  @apply h-full flex items-center px-8 tablet:px-16;
+  @apply h-full flex items-center px-8 note:px-16;
 }
 
 .navbar-items {
@@ -47,6 +55,6 @@ import RSidebar from './RSidebar.vue';
 }
 
 .user-icon {
-  @apply h-6;
+  @apply size-6;
 }
 </style>

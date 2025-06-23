@@ -18,6 +18,7 @@ const src = useAsset(props.name);
 
 <template>
   <img
+    class="select-none"
     :src="src"
     :alt="alt"
   />

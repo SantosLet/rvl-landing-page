@@ -57,7 +57,7 @@ const cardsInfo = [
 
 <style scoped>
 .cards-container {
-  @apply flex flex-wrap gap-6 pt-12;
+  @apply flex flex-wrap gap-6;
 }
 
 .card {
