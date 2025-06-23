@@ -75,8 +75,14 @@ const toggleQuestion = (index) => {
         >
           <div class="question-header" @click="toggleQuestion(i)">
             <p class="font-bold !text-primary text-lg">{{ question.title }}</p>
-            <RAsset 
-              :name="question.isOpen ? 'minus_icon_green.svg' : 'plus_icon_green.svg'" 
+
+            <RAsset v-if="question.isOpen"
+              name="minus_icon_green.svg" 
+              class="w-5 h-5 ml-2"
+            />
+
+            <RAsset v-else
+              name="plus_icon_green.svg" 
               class="w-5 h-5 ml-2"
             />
           </div>
