@@ -109,7 +109,7 @@ const toggleQuestion = (index) => {
 <style scoped>
 .faq-container {
   @apply flex flex-wrap content-start justify-center gap-8;
-  height: 65rem;
+  height: 67rem;
 }
 
 h2 {
@@ -121,7 +121,7 @@ p {
 }
 
 .question-header {
-  @apply min-h-16 flex justify-between items-center cursor-pointer;
+  @apply min-h-20 flex justify-between items-center cursor-pointer;
 }
 
 .question-answer {
